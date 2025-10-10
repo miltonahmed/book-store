@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router"
 import Error from "../Components/Error"
 import RootLayouts from "../Layouts/RootLayouts"
-import bookList from "../Pages/BookList"
+import BookListed from "../Pages/BookListed"
 import Home from "../Pages/Home"
 import ReadPages from "../Pages/ReadPages"
 
@@ -18,7 +18,7 @@ export const router = createBrowserRouter([
       },
       {
         path:'book-list',
-        Component:bookList,
+        Component:BookListed,
       },
       {
         path:'read-pages',
