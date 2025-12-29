@@ -7,7 +7,7 @@ import Button from '../common/Button';
 const Header = () => {
   const [showBars, setShowBars] = useState(false)
   return (
-    <nav className="py-6 bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+    <nav className="py-6 bg-white shadow-md left-0 right-0 z-50">
       <div className="max-w-11/12 mx-auto flex justify-between items-center">
         {/* Brand / Logo */}
         <Link
@@ -76,8 +76,8 @@ const Header = () => {
           </ul>
 
           <div className="flex flex-col items-center gap-3 mt-4">
-            <Button text="Sign In" />
-            <Button text="Sign Up" />
+            <Button text="Sign In"/>
+            <Button text="Sign Up"/>
           </div>
         </div>
       )}

@@ -4,19 +4,19 @@ import NavItems from '../Header/NavItems';
 const Responsive = ({ showBars, setShowBars }) => {
   return (
     <div
-      className={`min-w-[320px] h-full bg-black/70  px-6 py-18 fixed top-0 right-0 z-50 lg:hidden transition-all duration-300 ${
-        showBars ? 'translate-x-0' : 'translate-x-full'
-      }
-      `}
+      className={`min-w-[320px] h-full bg-black/70 px-6 py-[72px]  right-0 z-50 lg:hidden 
+    transition-all duration-300 ease-in-out
+    ${showBars ? 'translate-x-0' : 'translate-x-full'}
+  `}
     >
-      {/* close icons  */}
-
+      {/* Close icon */}
       <IoClose
+        aria-label="Close menu"
         onClick={() => setShowBars(false)}
-        className="text-3xl text-white absolute left-5 top-5 cursor-pointer "
+        className="text-3xl text-white absolute left-5 top-5 cursor-pointer"
       />
 
-      {/* Menu  */}
+      {/* Menu */}
       <ul className="flex flex-col gap-y-5">
         {NavItems.map(item => (
           <li key={item.id}>

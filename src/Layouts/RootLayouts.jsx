@@ -5,13 +5,13 @@ import Header from '../Components/Header/Header';
 const RootLayouts = () => {
   return (
     <div className="min-h-screen flex flex-col px-4">
-      <header className='w-full'>
+      <header className="w-11/12 mx-auto">
         <Header />
       </header>
-      <main className="flex-1 max-w-11/12 mx-auto ">
+      <main className="flex-1 w-11/12 mx-auto ">
         <Outlet />
       </main>
-      <footer className='w-full'>
+      <footer className="w-11/12 mx-auto">
         <Footer />
       </footer>
     </div>
