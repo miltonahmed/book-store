@@ -2,8 +2,10 @@
 const BookListed = () => {
  
   return (
-    <div>BookListed</div>
-  )
+    <div>
+     
+    </div>
+  );
 }
 
 export default BookListed

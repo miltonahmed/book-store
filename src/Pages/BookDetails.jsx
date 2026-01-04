@@ -1,6 +1,7 @@
 import React from 'react';
 import { CiStar } from 'react-icons/ci';
 import { useLoaderData, useParams } from 'react-router';
+import { addToStoredDB } from '../util/addToDB';
 
 const BookDetails = () => {
   const { id } = useParams();
@@ -22,6 +23,11 @@ const BookDetails = () => {
     yearOfPublishing,
   } = singleBookData;
 
+
+  const handleMarkAsRead = id => {
+    addToStoredDB(id)
+    
+  }
   return (
     <div className="container mx-auto my-12 grid grid-cols-1 lg:grid-cols-2 gap-12 px-4">
       {/* Left: Large Image Container */}
@@ -89,7 +95,10 @@ const BookDetails = () => {
 
         {/* Action Buttons */}
         <div className="flex gap-4">
-          <button className="px-8 py-4 border border-primary/20 rounded-xl font-bold hover:bg-primary hover:text-white transition-colors">
+          <button
+            onClick={() => handleMarkAsRead(id)}
+            className="px-8 py-4 border border-primary/20 rounded-xl font-bold hover:bg-primary hover:text-white transition-colors"
+          >
             Mark as Read
           </button>
           <button className="px-8 py-4 bg-[#50B1C9] text-white rounded-xl font-bold hover:bg-[#3e8ea2] transition-colors">
